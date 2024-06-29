@@ -7,6 +7,10 @@ import { useEffect } from "react";
 const useNowPlayingMovies = () => {
       // fetch data from TMDB API and update store
 
+      useEffect(() => {
+        getNowPlayingMovies();
+      }, []);
+
   const dispatch = useDispatch();
   
   
@@ -20,8 +24,6 @@ const useNowPlayingMovies = () => {
     dispatch(addNowPlayingMovies(json.results));
   };
 
-  useEffect(() => {
-    getNowPlayingMovies();
-  }, []);}
+ }
 
 export default useNowPlayingMovies;
