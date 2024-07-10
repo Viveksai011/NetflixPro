@@ -17,3 +17,10 @@ created redux store with userSlice
 -netflixGpt
 -search bar
 - movie suggestion
+
+
+
+<!-- Use Selector
+
+UseSelector hook is to asses to data from the store to the component
+to read from then redux store we use UseSelector hook -->

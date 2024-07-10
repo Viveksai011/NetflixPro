@@ -15,14 +15,14 @@ const useMovieTrailer = (movieId) => {
         throw new Error("Network response was not ok");
       }
       const json = await response.json();
-      console.log(json);
+    //   console.log(json);
 
       if (json.results) {
         const filterData = json.results.filter(
           (video) => video.type === "Trailer"
         );
         const trailer = filterData.length ? filterData[0] : json.results[0];
-        console.log(trailer);
+        // console.log(trailer);
         setTrailerId(trailer.key);
       } else {
         console.error("No results found in the response");
